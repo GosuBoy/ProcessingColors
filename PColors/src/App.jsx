@@ -8,6 +8,7 @@ import { TestElementsV2 } from "./components/colorPickerV2/TestElementsV2";
 import { hsv2rgb } from "./components/utils/hsv2rgb";
 import { UIContainer } from "./components/colorPickerV2/UIContainer";
 import { rgb2hsv } from "./components/utils/rgb2hsv";
+import { CPickerV3 } from "./components/colorPickerV3/CPickerV3";
 
 const PUIelements = [
     {
@@ -25,6 +26,7 @@ const PUIelements = [
 ];
 
 function App() {
+    /*
     const [currentColor, setCurrentColor] = useState([0, 0, 0]);
     //const [elems, setElems] = useState([...PUIelements]);
     const selectedElement = useRef(null);
@@ -61,20 +63,23 @@ function App() {
         const elements = Array.from(contRef.current.children);
         elements.forEach((e) => console.log(e.id, e.style.backgroundColor));
     }
-
+    */
     return (
         <div className="ml-56">
             <h1 className="text-8xl font-bold">PCOLORS</h1>
+            <CPickerV3 />
+            {/*
             <ColorPickerV2 input={currentColor} output={doSomething} />
             <UIContainer
                 elements={PUIelements}
                 selectionHandler={onSelection}
                 ref={contRef}
-                /*cref={contRef}*/
+                cref={contRef}
             />
             <button className="bg-black text-zinc-100" onClick={getNewColors}>
                 state
             </button>
+            */}
             {/*
             <TestElementsV2
                 onSelection={setCurrentColor}
