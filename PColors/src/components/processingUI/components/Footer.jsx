@@ -4,6 +4,8 @@ export function Footer({ handler }) {
             onClick={handler}
             className="w-full h-[50px] pl-[52px] pb-3 flex gap-1"
             style={{ backgroundColor: "#245425" }}
+            id="footer"
+            data-ctype="gradient"
         >
             <Tab />
             <Tab />

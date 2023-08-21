@@ -4,6 +4,8 @@ export function Toolbar({ handler }) {
             onClick={handler}
             className="w-full h-[83px] flex pl-[52px] content-center flex-wrap gap-3"
             style={{ backgroundColor: "#4643ff" }}
+            id="toolbar"
+            data-ctype="gradient"
         >
             <PlayButton />
             <StopButton />

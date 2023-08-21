@@ -4,6 +4,8 @@ export function Header({ handler }) {
             onClick={handler}
             className="w-full h-[40px] pl-[52px] flex"
             style={{ backgroundColor: "#333333" }}
+            id="header"
+            data-ctype="gradient"
         >
             <Tab />
             <TabDropDown />
