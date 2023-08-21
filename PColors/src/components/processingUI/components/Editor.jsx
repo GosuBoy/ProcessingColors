@@ -4,6 +4,8 @@ export function Editor({ handler }) {
             onClick={handler}
             className="w-full h-[282px] flex"
             style={{ backgroundColor: "#000000" }}
+            id="editor"
+            data-ctype="gradient"
         >
             <Inner />
         </div>
