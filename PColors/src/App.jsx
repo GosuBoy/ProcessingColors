@@ -11,22 +11,37 @@ function App() {
 
     function CPickerOutput(h, s, v) {
         if (CElement.current) {
-            const [r, g, b] = hsv2rgb(h, s, v);
-            CElement.current.style.backgroundColor = `rgb(${r * 255}, ${
-                g * 255
-            }, ${b * 255})`;
+            if (CElement.current.dataset.icon) {
+                const [r, g, b] = hsv2rgb(h, s, v);
+                CElement.current.style.fill = `rgb(${r * 255}, ${g * 255}, ${
+                    b * 255
+                })`;
+            } else {
+                const [r, g, b] = hsv2rgb(h, s, v);
+                CElement.current.style.backgroundColor = `rgb(${r * 255}, ${
+                    g * 255
+                }, ${b * 255})`;
+            }
         }
     }
 
     function PickColor(e) {
         CElement.current = e.target;
-        const [r, g, b] = e.target.style.backgroundColor
-            .split("(")[1]
-            .split(")")[0]
-            .split(",");
-
-        const [h, s, v] = rgb2hsv(r / 255, g / 255, b / 255);
-        setCColor([h, s, v]);
+        if (e.target.dataset.icon) {
+            const [r, g, b] = e.target.style.fill
+                .split("(")[1]
+                .split(")")[0]
+                .split(",");
+            const [h, s, v] = rgb2hsv(r / 255, g / 255, b / 255);
+            setCColor([h, s, v]);
+        } else {
+            const [r, g, b] = e.target.style.backgroundColor
+                .split("(")[1]
+                .split(")")[0]
+                .split(",");
+            const [h, s, v] = rgb2hsv(r / 255, g / 255, b / 255);
+            setCColor([h, s, v]);
+        }
     }
 
     return (
