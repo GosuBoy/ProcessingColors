@@ -62,7 +62,6 @@ body {
     position: relative;
 }
 
-.item {
-    /*width: 100px;*/
-    height: 100px;
+.icon {
+    /*pointer-events: none;*/
 }

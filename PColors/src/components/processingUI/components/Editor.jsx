@@ -25,7 +25,7 @@ function Inner() {
 function TextArea() {
     return (
         <div
-            className="w-full h-full"
+            className="w-auto h-full"
             style={{ backgroundColor: "rgb(153, 71, 71)" }}
         >
             <TextHighlight />
