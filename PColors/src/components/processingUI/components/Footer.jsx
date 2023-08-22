@@ -7,17 +7,28 @@ export function Footer({ handler }) {
             id="footer"
             data-ctype="gradient"
         >
-            <Tab />
-            <Tab />
+            <Tabs />
         </div>
     );
 }
 
-function Tab() {
+function Tabs() {
     return (
-        <div
-            className="w-24 h-full rounded-b-xl"
-            style={{ backgroundColor: "rgb(255, 10, 10)" }}
-        ></div>
+        <>
+            <div
+                className="w-24 h-full rounded-b-xl"
+                style={{ backgroundColor: "rgb(255, 10, 10)" }}
+                id="footer_tab_selected_color"
+                data-ctype="gradient"
+                data-state={true}
+            ></div>
+            <div
+                className="w-24 h-full rounded-b-xl"
+                style={{ backgroundColor: "rgb(255, 10, 10)" }}
+                id="footer_tab_enabled_color"
+                data-ctype="gradient"
+                data-state={true}
+            ></div>
+        </>
     );
 }

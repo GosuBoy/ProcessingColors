@@ -16,6 +16,8 @@ function Header() {
         <div
             className="w-full h-8"
             style={{ backgroundColor: "rgb(167, 151, 172)" }}
+            id="status_notice_bgcolor"
+            data-ctype="solid"
         ></div>
     );
 }
@@ -25,6 +27,8 @@ function ConsoleText() {
         <div
             className="h-[120px] w-full"
             style={{ backgroundColor: "#000000" }}
+            id="console_color"
+            data-ctype="solid"
         >
             <ConsoleScroll />
         </div>
@@ -36,6 +40,8 @@ function ConsoleScroll() {
         <div
             className="w-7 h-full ml-auto"
             style={{ backgroundColor: "#FFFFFF" }}
+            id="console_scrollbar_color"
+            data-ctype="solid"
         ></div>
     );
 }

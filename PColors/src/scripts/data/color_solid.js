@@ -264,4 +264,9 @@ export const ui_color_data_solid = [
         color_type: "solid",
         pcolor: ["footer.updates.text.color", "#FFFFFE"],
     },
+    {
+        id: "status_notice_bgcolor",
+        color_type: "solid",
+        pcolor: ["status.notice.bgcolor", "#747983"],
+    },
 ];
