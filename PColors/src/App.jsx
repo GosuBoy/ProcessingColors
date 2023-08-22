@@ -4,6 +4,7 @@ import { Options } from "./components/options/Options";
 import { ProcessingUI } from "./components/processingUI/ProcessingUI";
 import { rgb2hsv } from "./components/utils/rgb2hsv";
 import { hsv2rgb } from "./components/utils/hsv2rgb";
+import { Header } from "./components/Header";
 
 function App() {
     const [CColor, setCColor] = useState([0, 0, 0]);
@@ -46,7 +47,7 @@ function App() {
 
     return (
         <>
-            <header className="w-full h-20 bg-black mb-28"></header>
+            <Header />
             <main className="mx-[50px] flex gap-[110px]">
                 <Options />
                 <ProcessingUI selector={PickColor} />

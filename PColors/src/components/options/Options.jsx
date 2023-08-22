@@ -1,15 +1,24 @@
 import { save } from "../../scripts/save";
-import { Option } from "./Option";
-
-const options = ["RANDOM", "IMPORT", "SAVE", "COPY"];
 
 export function Options() {
     return (
-        <ul className="h-[554px] flex flex-col justify-between">
-            {options.map((optn, idx) => (
-                <Option key={idx} value={optn} />
-            ))}
-            <TempSaveButton />
+        <ul className="h-[554px] flex flex-col justify-between text-white text-6xl">
+            <li>
+                <button>RANDOMIZE</button>
+                <hr className="border-none h-[6px] bg-white" />
+            </li>
+            <li>
+                <button>IMPORT</button>
+                <hr className="border-none h-[6px] bg-white" />
+            </li>
+            <li>
+                <TempSaveButton />
+                <hr className="border-none h-[6px] bg-white" />
+            </li>
+            <li>
+                <button>COPY</button>
+                <hr className="border-none h-[6px] bg-white" />
+            </li>
         </ul>
     );
 }
