@@ -3,7 +3,7 @@ export function Header({ handler }) {
         <div
             onClick={handler}
             className="w-full h-[40px] pl-[52px] flex"
-            style={{ backgroundColor: "#333333" }}
+            style={{ backgroundColor: "#242528" }}
             id="header"
             data-ctype="gradient"
         >
@@ -17,7 +17,7 @@ function Tab() {
     return (
         <div
             className="rounded-tl-2xl w-36 h-full"
-            style={{ backgroundColor: "#0e0e0e" }}
+            style={{ backgroundColor: "#090B0E" }}
             id="header_tab_selected_color"
             data-ctype="solid"
         >
@@ -41,7 +41,7 @@ function TabDropDown() {
     return (
         <div
             className="h-full w-9 ml-3 rounded-tr-2xl"
-            style={{ backgroundColor: "#000000" }}
+            style={{ backgroundColor: "#0a0a0a" }}
             id="header_tab_unselected_color"
             data-ctype="solid"
         />

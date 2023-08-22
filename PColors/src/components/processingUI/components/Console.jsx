@@ -2,7 +2,7 @@ export function Console({ handler }) {
     return (
         <div
             className="w-full h-[120px]"
-            style={{ backgroundColor: "rgb(54, 3, 196)" }}
+            style={{ backgroundColor: "rgb(255, 255, 255)" }}
             onClick={handler}
         >
             <Header />
@@ -15,7 +15,7 @@ function Header() {
     return (
         <div
             className="w-full h-8"
-            style={{ backgroundColor: "rgb(167, 151, 172)" }}
+            style={{ backgroundColor: "#747983" }}
             id="status_notice_bgcolor"
             data-ctype="solid"
         ></div>
@@ -38,8 +38,8 @@ function ConsoleText() {
 function ConsoleScroll() {
     return (
         <div
-            className="w-7 h-full ml-auto"
-            style={{ backgroundColor: "#FFFFFF" }}
+            className="w-6 h-full ml-auto"
+            style={{ backgroundColor: "#151B23" }}
             id="console_scrollbar_color"
             data-ctype="solid"
         ></div>

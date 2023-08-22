@@ -3,7 +3,7 @@ export function Toolbar({ handler }) {
         <div
             onClick={handler}
             className="w-full h-[83px] flex pl-[52px] content-center flex-wrap gap-3"
-            style={{ backgroundColor: "#4643ff" }}
+            style={{ backgroundColor: "#242528" }}
             id="toolbar"
             data-ctype="gradient"
         >
@@ -17,7 +17,7 @@ function PlayButton() {
     return (
         <div
             className="w-[52px] h-[52px] rounded-full flex justify-center content-center flex-wrap"
-            style={{ backgroundColor: "#ff7979" }}
+            style={{ backgroundColor: "#757575" }}
         >
             <PlayIComponent />
         </div>
@@ -28,7 +28,7 @@ function StopButton() {
     return (
         <div
             className="w-[52px] h-[52px] rounded-full flex justify-center content-center flex-wrap"
-            style={{ backgroundColor: "#ff7979" }}
+            style={{ backgroundColor: "#757575" }}
         >
             <StopIComponent />
         </div>
