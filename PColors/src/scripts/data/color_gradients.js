@@ -4,6 +4,7 @@ export const ui_color_data_gradients = [
         color_type: "gradient",
         pcolorB: ["toolbar.gradient.bottom", "#242528"],
         pcolorT: ["toolbar.gradient.top", "#242528"],
+        extra: ["mode.background.color", "#242528"],
     },
     {
         id: "header",
