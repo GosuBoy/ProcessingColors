@@ -18,6 +18,8 @@ function Tab() {
         <div
             className="rounded-tl-2xl w-36 h-full"
             style={{ backgroundColor: "#0e0e0e" }}
+            id="header_tab_selected_color"
+            data-ctype="solid"
         >
             <TabBorder />
         </div>
@@ -29,6 +31,8 @@ function TabBorder() {
         <div
             className="h-full w-1 ml-auto"
             style={{ backgroundColor: "#FFFFFF" }}
+            id="header_tab_modified_color"
+            data-ctype="solid"
         ></div>
     );
 }
@@ -38,6 +42,8 @@ function TabDropDown() {
         <div
             className="h-full w-9 ml-3 rounded-tr-2xl"
             style={{ backgroundColor: "#000000" }}
+            id="header_tab_unselected_color"
+            data-ctype="solid"
         />
     );
 }
