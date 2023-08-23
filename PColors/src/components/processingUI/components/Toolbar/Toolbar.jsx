@@ -1,14 +1,23 @@
+import { DebugIcon } from "../Icons/DebugIcon";
+import { PlayIcon } from "../Icons/PlayIcon";
+import { StopIcon } from "../Icons/StopIcon";
+import { TabMenuIcon } from "../Icons/TabMenuIcon";
+
 export function Toolbar({ handler }) {
     return (
         <div
             onClick={handler}
-            className="w-full h-[83px] flex pl-[52px] content-center flex-wrap gap-3"
+            className="w-full h-[83px] flex pl-[52px] pr-4 content-center flex-wrap gap-3"
             style={{ backgroundColor: "#242528" }}
             id="toolbar"
             data-ctype="gradient"
         >
             <PlayButton />
             <StopButton />
+            <div className="flex  ml-auto gap-3 items-center">
+                <DebugButton />
+                <ModeButton />
+            </div>
         </div>
     );
 }
@@ -19,7 +28,7 @@ function PlayButton() {
             className="w-[52px] h-[52px] rounded-full flex justify-center content-center flex-wrap"
             style={{ backgroundColor: "#757575" }}
         >
-            <PlayIComponent />
+            <PlayIcon />
         </div>
     );
 }
@@ -30,43 +39,31 @@ function StopButton() {
             className="w-[52px] h-[52px] rounded-full flex justify-center content-center flex-wrap"
             style={{ backgroundColor: "#757575" }}
         >
-            <StopIComponent />
+            <StopIcon />
         </div>
     );
 }
 
-function PlayIComponent() {
+function DebugButton() {
     return (
-        <svg
-            className="icon pointer-events-none mr-4 ml-5"
-            viewBox="0 0 152 153"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <div
+            className="w-[52px] h-[52px] rounded-full flex justify-center content-center flex-wrap"
+            style={{ backgroundColor: "#757575" }}
         >
-            <path
-                className="pointer-events-auto"
-                d="M151.513 76.5626L0.0875244 152.275V0.850098L151.513 76.5626Z"
-                style={{ fill: "#FFFFFF" }}
-                data-icon={true}
-            />
-        </svg>
+            <DebugIcon />
+        </div>
     );
 }
 
-function StopIComponent() {
+function ModeButton() {
     return (
-        <svg
-            className="icon pointer-events-none mx-[19px]"
-            viewBox="0 0 16 17"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <div
+            className="h-[38px] px-3
+            rounded-md flex justify-center items-center content-center flex-wrap
+            border-2 text-gray-400 border-gray-400 text-xs"
         >
-            <path
-                className="pointer-events-auto"
-                d="M15.7992 0.549072V16.4491H0.199219V0.549072H15.7992Z"
-                style={{ fill: "#FFFFFF" }}
-                data-icon={true}
-            />
-        </svg>
+            <span className="mr-2">Java</span>
+            <TabMenuIcon />
+        </div>
     );
 }

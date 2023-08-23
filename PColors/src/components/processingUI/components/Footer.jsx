@@ -1,3 +1,6 @@
+import { ConsoleIcon } from "./Icons/ConsoleIcon";
+import { ErrorsIcon } from "./Icons/ErrorsIcon";
+
 export function Footer({ handler }) {
     return (
         <div
@@ -16,19 +19,25 @@ function Tabs() {
     return (
         <>
             <div
-                className="w-24 h-full rounded-b-xl"
+                className=" h-full rounded-b-lg flex px-4 items-center"
                 style={{ backgroundColor: "#6C7078" }}
                 id="footer_tab_selected_color"
                 data-ctype="gradient"
                 data-state={true}
-            ></div>
+            >
+                <ConsoleIcon />
+                <span className="ml-2 text-white text-xs">Console</span>
+            </div>
             <div
-                className="w-24 h-full rounded-b-xl"
+                className="h-full rounded-b-lg flex px-4 items-center"
                 style={{ backgroundColor: "#6C7078" }}
-                id="footer_tab_enabled_color"
+                id="footer_tab_selected_color"
                 data-ctype="gradient"
                 data-state={true}
-            ></div>
+            >
+                <ErrorsIcon />
+                <span className="ml-2 text-white text-xs">Errors</span>
+            </div>
         </>
     );
 }
