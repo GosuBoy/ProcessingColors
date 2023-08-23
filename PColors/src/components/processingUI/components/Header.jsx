@@ -1,3 +1,5 @@
+import { TabMenuIcon } from "./Icons/TabMenuIcon";
+
 export function Header({ handler }) {
     return (
         <div
@@ -16,11 +18,12 @@ export function Header({ handler }) {
 function Tab() {
     return (
         <div
-            className="rounded-tl-2xl w-36 h-full"
+            className="rounded-tl-xl h-full flex text-gray-400 text-sm items-center pl-3 gap-3"
             style={{ backgroundColor: "#090B0E" }}
             id="header_tab_selected_color"
             data-ctype="solid"
         >
+            <span>sketch 230823a</span>
             <TabBorder />
         </div>
     );
@@ -40,10 +43,12 @@ function TabBorder() {
 function TabDropDown() {
     return (
         <div
-            className="h-full w-9 ml-3 rounded-tr-2xl"
+            className="h-full w-7 ml-1 rounded-tr-xl flex items-center justify-center"
             style={{ backgroundColor: "#0a0a0a" }}
             id="header_tab_unselected_color"
             data-ctype="solid"
-        />
+        >
+            <TabMenuIcon />
+        </div>
     );
 }

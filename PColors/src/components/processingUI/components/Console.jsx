@@ -1,3 +1,6 @@
+import { ClipboardIcon } from "./Icons/ClipboardIcon";
+import { CollapseIcon } from "./Icons/CollapseIcon";
+
 export function Console({ handler }) {
     return (
         <div
@@ -14,11 +17,14 @@ export function Console({ handler }) {
 function Header() {
     return (
         <div
-            className="w-full h-8"
+            className="w-full h-8 flex flex-row-reverse px-2 gap-3"
             style={{ backgroundColor: "#747983" }}
             id="status_notice_bgcolor"
             data-ctype="solid"
-        ></div>
+        >
+            <CollapseIcon />
+            <ClipboardIcon />
+        </div>
     );
 }
 
